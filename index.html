@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educación Vincular Positiva — Cursada Semi-Intensiva 2026 | IMCA</title>
+  <meta name="description" content="Formación en educación canina profesional con orientación antrozoológica. Cursada semi-intensiva, 100% online. Inicia sábado 1 de agosto 2026.">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       RESET MÍNIMO DEL DOCUMENTO
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      background: #042C3C;
+    }
+
+    /* ============================================================
+       VARIABLES CSS — ancladas al contenedor
+    ============================================================ */
+    .landing-semi-intensiva {
+      --lsi-azul:         #467FF7;
+      --lsi-azul-hover:   #2f66e5;
+      --lsi-azul-oscuro:  #042C3C;
+      --lsi-amarillo:     #EAFF00;
+      --lsi-verde:        #27AE60;
+      --lsi-rojo:         #E63946;
+      --lsi-dorado:       #C9A961;
+      --lsi-blanco:       #FFFFFF;
+      --lsi-gris-claro:   #F1F1F1;
+      --lsi-gris:         #DDDDDD;
+      --lsi-gris-medio:   #C1C1C1;
+      --lsi-texto:        #042C3C;
+      --lsi-font:         'Poppins', sans-serif;
+      --lsi-radio:        12px;
+      --lsi-sombra:       0 4px 20px rgba(4,44,60,0.09);
+      --lsi-sombra-hover: 0 8px 32px rgba(4,44,60,0.17);
+    }
+
+    /* ============================================================
+       BASE DEL CONTENEDOR
+    ============================================================ */
+    .landing-semi-intensiva {
+      font-family: var(--lsi-font);
+      font-size:   16px;
+      line-height: 1.65;
+      color:       var(--lsi-texto);
+      background:  var(--lsi-blanco);
+      overflow-x:  hidden;
+      width:       100%;
+    }
+
+    .landing-semi-intensiva h1,
+    .landing-semi-intensiva h2,
+    .landing-semi-intensiva h3,
+    .landing-semi-intensiva h4,
+    .landing-semi-intensiva h5,
+    .landing-semi-intensiva h6 {
+      margin: 0; padding: 0;
+      font-family: var(--lsi-font);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .landing-semi-intensiva p {
+      margin: 0 0 1em;
+      font-family: var(--lsi-font);
+      font-size: 16px;
+    }
+    .landing-semi-intensiva ul,
+    .landing-semi-intensiva ol { margin: 0; padding: 0; list-style: none; }
+    .landing-semi-intensiva a  { text-decoration: none; color: inherit; font-family: var(--lsi-font); }
+    .landing-semi-intensiva img { max-width: 100%; height: auto; display: block; }
+    .landing-semi-intensiva button { font-family: var(--lsi-font); }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .landing-semi-intensiva .lsi-container {
+      max-width: 1100px;
+      margin:    0 auto;
+      padding:   0 24px;
+      width:     100%;
+    }
+    .landing-semi-intensiva .lsi-seccion         { padding: 80px 0; }
+    .landing-semi-intensiva .lsi-seccion-clara   { background: var(--lsi-blanco); }
+    .landing-semi-intensiva .lsi-seccion-oscura  { background: var(--lsi-azul-oscuro); }
+    .landing-semi-intensiva .lsi-seccion-media   { background: var(--lsi-gris-claro); }
+
+    /* ============================================================
+       TIPOGRAFÍA GLOBAL
+    ============================================================ */
+    .landing-semi-intensiva .lsi-titulo-seccion {
+      font-size:      clamp(24px, 4vw, 36px);
+      font-weight:    800;
+      color:          var(--lsi-azul-oscuro);
+      text-align:     center;
+      margin-bottom:  12px;
+      letter-spacing: -0.5px;
+    }
+    .landing-semi-intensiva .lsi-titulo-claro    { color: var(--lsi-blanco); }
+    .landing-semi-intensiva .lsi-texto-claro     { color: rgba(255,255,255,0.82); }
+
+    .landing-semi-intensiva .lsi-subtitulo-seccion {
+      font-size:     17px;
+      text-align:    center;
+      color:         #555;
+      margin-bottom: 48px;
+      margin-top:    0;
+    }
+    .landing-semi-intensiva .lsi-texto-descripcion {
+      font-size:   17px;
+      max-width:   820px;
+      margin:      24px auto 0;
+      text-align:  center;
+      line-height: 1.8;
+      color:       var(--lsi-texto);
+    }
+    .landing-semi-intensiva .lsi-texto-descripcion strong { color: var(--lsi-azul-oscuro); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .landing-semi-intensiva .lsi-hero {
+      position:            relative;
+      min-height:          100vh;
+      display:             flex;
+      align-items:         center;
+      justify-content:     center;
+      overflow:            hidden;
+      /* PLACEHOLDER: reemplazar la URL con la foto real de portada del instituto */
+      background-image:    url('https://placehold.co/1600x900/042C3C/467FF7?text=📸+FOTO+PORTADA+IMCA');
+      background-size:     cover;
+      background-position: center top;
+    }
+    .landing-semi-intensiva .lsi-hero-overlay {
+      position:   absolute;
+      inset:      0;
+      background: linear-gradient(160deg, rgba(4,44,60,0.86) 0%, rgba(4,44,60,0.68) 55%, rgba(70,127,247,0.28) 100%);
+      z-index:    1;
+    }
+    .landing-semi-intensiva .lsi-hero-inner {
+      position:        relative;
+      z-index:         2;
+      text-align:      center;
+      padding:         80px 24px 64px;
+      width:           100%;
+      max-width:       880px;
+      margin:          0 auto;
+      display:         flex;
+      flex-direction:  column;
+      align-items:     center;
+      gap:             24px;
+    }
+
+    /* Logo placeholder */
+    .landing-semi-intensiva .lsi-logo-text {
+      font-size:      26px;
+      font-weight:    800;
+      color:          var(--lsi-blanco);
+      letter-spacing: 5px;
+      border:         2px solid var(--lsi-dorado);
+      padding:        6px 20px;
+      display:        inline-block;
+    }
+
+    /* Título hero */
+    .landing-semi-intensiva .lsi-hero-titulo {
+      font-size:      clamp(38px, 9vw, 76px);
+      font-weight:    800;
+      line-height:    1.0;
+      letter-spacing: -1.5px;
+      text-transform: uppercase;
+      display:        flex;
+      flex-direction: column;
+      gap:            4px;
+    }
+    .landing-semi-intensiva .lsi-hero-titulo-blanco { color: var(--lsi-blanco); display: block; }
+    .landing-semi-intensiva .lsi-hero-titulo-dorado { color: var(--lsi-dorado); display: block; }
+
+    .landing-semi-intensiva .lsi-hero-subtitulo {
+      font-size:   clamp(15px, 2.2vw, 19px);
+      color:       rgba(255,255,255,0.88);
+      max-width:   600px;
+      line-height: 1.55;
+      margin:      0;
+    }
+
+    /* Datos clave */
+    .landing-semi-intensiva .lsi-hero-datos {
+      display:         flex;
+      flex-wrap:       wrap;
+      gap:             14px;
+      justify-content: center;
+      width:           100%;
+    }
+    .landing-semi-intensiva .lsi-hero-dato {
+      display:       flex;
+      align-items:   center;
+      gap:           10px;
+      background:    rgba(255,255,255,0.10);
+      border:        1px solid rgba(255,255,255,0.22);
+      border-radius: calc(var(--lsi-radio) - 2px);
+      padding:       12px 18px;
+      text-align:    left;
+      flex:          1 1 148px;
+      max-width:     200px;
+    }
+    .landing-semi-intensiva .lsi-hero-dato-icono { flex-shrink: 0; line-height: 0; }
+    .landing-semi-intensiva .lsi-hero-dato-icono svg { width: 22px; height: 22px; color: var(--lsi-dorado); }
+    .landing-semi-intensiva .lsi-hero-dato-label {
+      display: block; font-size: 10px; font-weight: 700;
+      color: var(--lsi-dorado); text-transform: uppercase; letter-spacing: 1.2px;
+    }
+    .landing-semi-intensiva .lsi-hero-dato-valor {
+      display: block; font-size: 14px; font-weight: 600; color: var(--lsi-blanco);
+    }
+
+    /* Badge fecha */
+    .landing-semi-intensiva .lsi-hero-fecha-badge {
+      display:        inline-flex;
+      align-items:    center;
+      gap:            8px;
+      background:     var(--lsi-azul);
+      color:          var(--lsi-blanco);
+      font-size:      14px;
+      font-weight:    700;
+      padding:        10px 24px;
+      border-radius:  999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .landing-semi-intensiva .lsi-hero-fecha-badge svg { width: 18px; height: 18px; }
+
+    /* ============================================================
+       BOTÓN CTA
+    ============================================================ */
+    .landing-semi-intensiva .lsi-btn-cta {
+      display:         inline-flex;
+      align-items:     center;
+      justify-content: center;
+      gap:             10px;
+      background:      var(--lsi-azul);
+      color:           var(--lsi-blanco);
+      font-size:       17px;
+      font-weight:     700;
+      padding:         16px 44px;
+      border-radius:   999px;
+      border:          none;
+      cursor:          pointer;
+      text-transform:  uppercase;
+      letter-spacing:  1px;
+      transition:      background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow:      0 4px 22px rgba(70,127,247,0.38);
+      min-width:       220px;
+      text-align:      center;
+    }
+    .landing-semi-intensiva .lsi-btn-cta:hover {
+      background: var(--lsi-azul-hover);
+      transform:  translateY(-2px);
+      box-shadow: 0 8px 30px rgba(70,127,247,0.48);
+      color:      var(--lsi-blanco);
+    }
+    .landing-semi-intensiva .lsi-btn-cta-grande { font-size: 20px; padding: 20px 56px; min-width: 280px; }
+
+    /* ============================================================
+       OBJETIVOS
+    ============================================================ */
+    .landing-semi-intensiva .lsi-objetivos-lista {
+      display:               grid;
+      grid-template-columns: 1fr 1fr;
+      gap:                   16px;
+      margin:                40px auto 0;
+      max-width:             900px;
+    }
+    .landing-semi-intensiva .lsi-objetivo-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      color: rgba(255,255,255,0.90); font-size: 15px; line-height: 1.55;
+    }
+    .landing-semi-intensiva .lsi-check-icono { flex-shrink: 0; line-height: 0; margin-top: 2px; }
+    .landing-semi-intensiva .lsi-check-icono svg { width: 20px; height: 20px; color: var(--lsi-verde); }
+
+    /* ============================================================
+       CARDS DE CURSADA
+    ============================================================ */
+    .landing-semi-intensiva .lsi-cards-grid {
+      display:               grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:                   24px;
+      margin-top:            48px;
+    }
+    .landing-semi-intensiva .lsi-card {
+      background: var(--lsi-blanco); border: 1px solid var(--lsi-gris);
+      border-radius: var(--lsi-radio); padding: 32px 24px; text-align: center;
+      box-shadow: var(--lsi-sombra); transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .landing-semi-intensiva .lsi-card:hover { box-shadow: var(--lsi-sombra-hover); transform: translateY(-3px); }
+    .landing-semi-intensiva .lsi-card-icono {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--lsi-azul) 0%, var(--lsi-azul-hover) 100%);
+      border-radius: 16px; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; line-height: 0;
+    }
+    .landing-semi-intensiva .lsi-card-icono svg { width: 26px; height: 26px; color: var(--lsi-blanco); }
+    .landing-semi-intensiva .lsi-card-titulo { font-size: 17px; font-weight: 700; color: var(--lsi-azul-oscuro); margin-bottom: 12px; }
+    .landing-semi-intensiva .lsi-card-texto  { font-size: 14px; color: #444; line-height: 1.7; margin: 0; }
+
+    /* ============================================================
+       RECURSOS DE CURSADA
+    ============================================================ */
+    .landing-semi-intensiva .lsi-recursos-grid {
+      display:               grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:                   20px;
+      margin-top:            48px;
+    }
+    .landing-semi-intensiva .lsi-recurso-item {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 12px; padding: 24px 16px; background: var(--lsi-blanco);
+      border-radius: var(--lsi-radio); box-shadow: var(--lsi-sombra); transition: box-shadow 0.2s;
+    }
+    .landing-semi-intensiva .lsi-recurso-item:hover { box-shadow: var(--lsi-sombra-hover); }
+    .landing-semi-intensiva .lsi-recurso-icono { line-height: 0; }
+    .landing-semi-intensiva .lsi-recurso-icono svg { width: 32px; height: 32px; color: var(--lsi-azul); }
+    .landing-semi-intensiva .lsi-recurso-texto { font-size: 14px; font-weight: 500; color: var(--lsi-texto); line-height: 1.45; }
+
+    /* ============================================================
+       ACORDEÓN DE MÓDULOS
+    ============================================================ */
+    .landing-semi-intensiva .lsi-acordeon { margin-top: 40px; display: flex; flex-direction: column; gap: 8px; }
+
+    .landing-semi-intensiva .lsi-modulo {
+      border: 1px solid var(--lsi-gris); border-radius: var(--lsi-radio); overflow: hidden;
+    }
+    .landing-semi-intensiva .lsi-modulo-titulo {
+      width: 100%; display: flex; align-items: center; gap: 14px;
+      padding: 18px 22px; background: var(--lsi-blanco); border: none;
+      cursor: pointer; text-align: left; font-size: 15px; font-weight: 600;
+      color: var(--lsi-azul-oscuro); transition: background 0.15s, color 0.15s;
+    }
+    .landing-semi-intensiva .lsi-modulo-titulo:hover { background: var(--lsi-gris-claro); }
+    .landing-semi-intensiva .lsi-modulo.lsi-abierto .lsi-modulo-titulo { background: var(--lsi-azul); color: var(--lsi-blanco); }
+
+    .landing-semi-intensiva .lsi-modulo-num {
+      font-size: 12px; font-weight: 800; color: var(--lsi-azul);
+      background: rgba(70,127,247,0.12); border-radius: 8px; padding: 4px 10px;
+      flex-shrink: 0; min-width: 38px; text-align: center; transition: background 0.15s, color 0.15s;
+    }
+    .landing-semi-intensiva .lsi-modulo.lsi-abierto .lsi-modulo-num { background: rgba(255,255,255,0.22); color: var(--lsi-blanco); }
+    .landing-semi-intensiva .lsi-modulo-nombre { flex: 1; font-size: 15px; }
+    .landing-semi-intensiva .lsi-modulo-chevron { flex-shrink: 0; line-height: 0; transition: transform 0.28s ease; }
+    .landing-semi-intensiva .lsi-modulo-chevron svg { width: 20px; height: 20px; color: currentColor; }
+    .landing-semi-intensiva .lsi-modulo.lsi-abierto .lsi-modulo-chevron { transform: rotate(180deg); }
+
+    .landing-semi-intensiva .lsi-modulo-contenido {
+      max-height: 0; overflow: hidden; transition: max-height 0.32s ease; background: #f7faff;
+    }
+    .landing-semi-intensiva .lsi-modulo.lsi-abierto .lsi-modulo-contenido { max-height: 700px; }
+    .landing-semi-intensiva .lsi-modulo-lista { padding: 20px 24px 28px; display: flex; flex-direction: column; gap: 8px; }
+    .landing-semi-intensiva .lsi-modulo-lista li { font-size: 14px; color: #333; line-height: 1.6; padding-left: 18px; position: relative; }
+    .landing-semi-intensiva .lsi-modulo-lista li::before { content: '›'; position: absolute; left: 4px; color: var(--lsi-azul); font-weight: 700; }
+
+    /* Destaque amarillo Role Playing */
+    .landing-semi-intensiva .lsi-destaque-amarillo {
+      background: var(--lsi-amarillo); color: var(--lsi-azul-oscuro);
+      border-radius: var(--lsi-radio); padding: 22px 32px; margin-top: 32px;
+      font-size: 15px; font-weight: 500; line-height: 1.65; text-align: center;
+    }
+    .landing-semi-intensiva .lsi-destaque-amarillo strong { font-weight: 800; font-size: 16px; }
+
+    /* ============================================================
+       MASTER CLASSES
+    ============================================================ */
+    .landing-semi-intensiva .lsi-masterclass-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;
+    }
+    .landing-semi-intensiva .lsi-masterclass-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.28);
+      border-radius: var(--lsi-radio); padding: 24px 20px; text-align: center; transition: background 0.2s;
+    }
+    .landing-semi-intensiva .lsi-masterclass-card:hover { background: rgba(255,255,255,0.11); }
+    .landing-semi-intensiva .lsi-masterclass-icono { display: block; line-height: 0; margin-bottom: 14px; }
+    .landing-semi-intensiva .lsi-masterclass-icono svg { width: 32px; height: 32px; color: var(--lsi-dorado); margin: 0 auto; }
+    .landing-semi-intensiva .lsi-masterclass-titulo { font-size: 15px; font-weight: 700; color: var(--lsi-blanco); margin-bottom: 8px; line-height: 1.4; }
+    .landing-semi-intensiva .lsi-masterclass-disertante { font-size: 13px; color: var(--lsi-dorado); line-height: 1.45; margin: 0; }
+
+    /* ============================================================
+       PRÁCTICAS PROFESIONALES
+    ============================================================ */
+    .landing-semi-intensiva .lsi-practicas-bloque { border-radius: var(--lsi-radio); padding: 28px 28px 24px; margin-top: 32px; }
+    .landing-semi-intensiva .lsi-practicas-obligatorias { background: #eef5ff; border-left: 4px solid var(--lsi-azul); }
+    .landing-semi-intensiva .lsi-practicas-optativas   { background: #eefaf3; border-left: 4px solid var(--lsi-verde); }
+    .landing-semi-intensiva .lsi-practicas-subtitulo   { font-size: 18px; font-weight: 700; color: var(--lsi-azul-oscuro); margin-bottom: 20px; }
+
+    .landing-semi-intensiva .lsi-practica-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+    .landing-semi-intensiva .lsi-practica-item:last-child { margin-bottom: 0; }
+    .landing-semi-intensiva .lsi-practica-num {
+      width: 32px; height: 32px; border-radius: 50%; background: var(--lsi-azul);
+      color: var(--lsi-blanco); font-size: 15px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .landing-semi-intensiva .lsi-practicas-optativas .lsi-practica-num { background: var(--lsi-verde); }
+    .landing-semi-intensiva .lsi-practica-nombre { font-size: 15px; font-weight: 700; color: var(--lsi-azul-oscuro); display: block; margin-bottom: 6px; }
+    .landing-semi-intensiva .lsi-practica-desc   { font-size: 14px; color: #444; line-height: 1.65; margin: 0; }
+
+    .landing-semi-intensiva .lsi-practicas-destaques { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; justify-content: center; }
+    .landing-semi-intensiva .lsi-destaque-mini {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--lsi-azul-oscuro); color: var(--lsi-blanco);
+      border-radius: 999px; padding: 10px 20px; font-size: 14px; font-weight: 600;
+    }
+    .landing-semi-intensiva .lsi-destaque-mini-icono { line-height: 0; }
+    .landing-semi-intensiva .lsi-destaque-mini-icono svg { width: 18px; height: 18px; color: var(--lsi-dorado); }
+
+    /* ============================================================
+       PREPARACIÓN PROFESIONAL / SALIDAS
+    ============================================================ */
+    .landing-semi-intensiva .lsi-salidas-lista { margin: 24px auto 0; max-width: 720px; display: flex; flex-direction: column; gap: 14px; }
+    .landing-semi-intensiva .lsi-salida-item   { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--lsi-texto); line-height: 1.6; }
+    .landing-semi-intensiva .lsi-salida-icono  { flex-shrink: 0; line-height: 0; margin-top: 3px; }
+    .landing-semi-intensiva .lsi-salida-icono svg { width: 18px; height: 18px; color: var(--lsi-azul); }
+
+    .landing-semi-intensiva .lsi-certificado-destaque {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+      gap: 16px; background: var(--lsi-azul-oscuro); color: var(--lsi-blanco);
+      border-radius: var(--lsi-radio); padding: 22px 32px; margin-top: 40px;
+      font-size: 15px; line-height: 1.55; text-align: center;
+    }
+    .landing-semi-intensiva .lsi-certificado-icono { line-height: 0; flex-shrink: 0; }
+    .landing-semi-intensiva .lsi-certificado-icono svg { width: 32px; height: 32px; color: var(--lsi-dorado); }
+
+    /* ============================================================
+       EQUIPO DOCENTE
+    ============================================================ */
+    .landing-semi-intensiva .lsi-docentes-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-top: 40px;
+    }
+    .landing-semi-intensiva .lsi-docente-card  { text-align: center; }
+    .landing-semi-intensiva .lsi-docente-foto-wrapper { margin-bottom: 12px; }
+    .landing-semi-intensiva .lsi-docente-foto-placeholder {
+      width: 90px; height: 90px; border-radius: 50%;
+      background: rgba(70,127,247,0.15); border: 3px solid var(--lsi-dorado);
+      display: flex; align-items: center; justify-content: center; margin: 0 auto; line-height: 0;
+    }
+    .landing-semi-intensiva .lsi-docente-foto-placeholder svg { width: 38px; height: 38px; color: var(--lsi-dorado); }
+    .landing-semi-intensiva .lsi-docente-foto-wrapper img {
+      width: 90px; height: 90px; border-radius: 50%;
+      object-fit: cover; border: 3px solid var(--lsi-dorado); margin: 0 auto; display: block;
+    }
+    .landing-semi-intensiva .lsi-docente-nombre { font-size: 14px; font-weight: 700; color: var(--lsi-blanco); margin-bottom: 4px; line-height: 1.3; }
+    .landing-semi-intensiva .lsi-docente-rol    { font-size: 12px; color: rgba(255,255,255,0.62); line-height: 1.45; margin: 0; }
+
+    /* ============================================================
+       ARANCELES
+    ============================================================ */
+    .landing-semi-intensiva .lsi-aranceles-region-titulo {
+      font-size: 20px; font-weight: 700; color: var(--lsi-azul-oscuro);
+      margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--lsi-azul);
+    }
+    .landing-semi-intensiva .lsi-mt-seccion { margin-top: 60px; }
+
+    .landing-semi-intensiva .lsi-precios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .landing-semi-intensiva .lsi-precio-card {
+      position: relative; background: var(--lsi-blanco); border: 2px solid var(--lsi-gris);
+      border-radius: var(--lsi-radio); padding: 32px 24px; text-align: center;
+      box-shadow: var(--lsi-sombra); transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .landing-semi-intensiva .lsi-precio-card:hover         { box-shadow: var(--lsi-sombra-hover); transform: translateY(-2px); }
+    .landing-semi-intensiva .lsi-precio-card-destacado     { border-color: var(--lsi-azul); }
+    .landing-semi-intensiva .lsi-precio-plan { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #666; margin-bottom: 12px; }
+    .landing-semi-intensiva .lsi-precio-valor { font-size: 20px; font-weight: 600; color: var(--lsi-azul-oscuro); line-height: 1.35; }
+    .landing-semi-intensiva .lsi-precio-valor strong { font-size: 30px; font-weight: 800; color: var(--lsi-azul); display: block; }
+    .landing-semi-intensiva .lsi-precio-valor small   { font-size: 13px; color: #888; font-weight: 400; }
+    .landing-semi-intensiva .lsi-badge-descuento {
+      position: absolute; top: -14px; right: 16px;
+      background: var(--lsi-rojo); color: var(--lsi-blanco);
+      font-size: 13px; font-weight: 800; padding: 4px 14px; border-radius: 999px;
+    }
+
+    .landing-semi-intensiva .lsi-inscripcion-anticipada {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+      gap: 10px; background: var(--lsi-verde); color: var(--lsi-blanco);
+      border-radius: var(--lsi-radio); padding: 14px 28px; margin-top: 18px;
+      font-size: 15px; font-weight: 700; text-align: center;
+    }
+    .landing-semi-intensiva .lsi-ia-icono { line-height: 0; }
+    .landing-semi-intensiva .lsi-ia-icono svg { width: 20px; height: 20px; color: var(--lsi-amarillo); }
+
+    .landing-semi-intensiva .lsi-banner-cta-aranceles {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+      gap: 16px; background: var(--lsi-azul-oscuro); color: var(--lsi-blanco);
+      border-radius: var(--lsi-radio); padding: 30px 36px; margin-top: 44px;
+      font-size: clamp(18px, 3vw, 24px); font-weight: 700; text-align: center;
+    }
+    .landing-semi-intensiva .lsi-banner-cta-aranceles strong { color: var(--lsi-dorado); }
+    .landing-semi-intensiva .lsi-banner-icono { line-height: 0; flex-shrink: 0; }
+    .landing-semi-intensiva .lsi-banner-icono svg { width: 38px; height: 38px; color: var(--lsi-dorado); }
+
+    /* ============================================================
+       CTA FINAL
+    ============================================================ */
+    .landing-semi-intensiva .lsi-cta-final { padding: 100px 0; }
+    .landing-semi-intensiva .lsi-cta-contenido { display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center; }
+    .landing-semi-intensiva .lsi-cta-desc { font-size: 18px; max-width: 560px; line-height: 1.65; margin: 0; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .landing-semi-intensiva .lsi-footer { background: #020e15; color: rgba(255,255,255,0.72); padding: 44px 0; }
+    .landing-semi-intensiva .lsi-footer-inner {
+      display: flex; align-items: center; gap: 32px;
+      flex-wrap: wrap; justify-content: center; text-align: center;
+    }
+    .landing-semi-intensiva .lsi-logo-footer { font-size: 22px; letter-spacing: 4px; }
+    .landing-semi-intensiva .lsi-footer-info { display: flex; flex-direction: column; align-items: center; }
+    .landing-semi-intensiva .lsi-footer-inst    { font-size: 15px; font-weight: 600; color: var(--lsi-blanco); margin-bottom: 2px; }
+    .landing-semi-intensiva .lsi-footer-tagline { font-size: 13px; margin-bottom: 14px; }
+    .landing-semi-intensiva .lsi-footer-contacto { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .landing-semi-intensiva .lsi-footer-link {
+      display: flex; align-items: center; gap: 6px;
+      color: rgba(255,255,255,0.72); font-size: 14px; transition: color 0.2s;
+    }
+    .landing-semi-intensiva .lsi-footer-link:hover { color: var(--lsi-azul); }
+    .landing-semi-intensiva .lsi-footer-icono { line-height: 0; }
+    .landing-semi-intensiva .lsi-footer-icono svg { width: 16px; height: 16px; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 960px) {
+      .landing-semi-intensiva .lsi-cards-grid        { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
+      .landing-semi-intensiva .lsi-recursos-grid     { grid-template-columns: repeat(2, 1fr); }
+      .landing-semi-intensiva .lsi-masterclass-grid  { grid-template-columns: repeat(2, 1fr); }
+      .landing-semi-intensiva .lsi-docentes-grid     { grid-template-columns: repeat(3, 1fr); }
+      .landing-semi-intensiva .lsi-objetivos-lista   { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .landing-semi-intensiva .lsi-seccion      { padding: 56px 0; }
+      .landing-semi-intensiva .lsi-hero-inner   { padding: 64px 16px 52px; gap: 18px; }
+      .landing-semi-intensiva .lsi-hero-dato    { flex: 1 1 calc(50% - 5px); max-width: unset; padding: 10px 14px; }
+      .landing-semi-intensiva .lsi-recursos-grid    { grid-template-columns: 1fr 1fr; }
+      .landing-semi-intensiva .lsi-masterclass-grid { grid-template-columns: 1fr; }
+      .landing-semi-intensiva .lsi-precios-grid     { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
+      .landing-semi-intensiva .lsi-docentes-grid    { grid-template-columns: repeat(2, 1fr); }
+      .landing-semi-intensiva .lsi-banner-cta-aranceles { flex-direction: column; gap: 10px; }
+      .landing-semi-intensiva .lsi-modulo-titulo    { font-size: 14px; padding: 14px 16px; gap: 10px; }
+      .landing-semi-intensiva .lsi-practicas-bloque { padding: 20px 16px; }
+      .landing-semi-intensiva .lsi-cta-final        { padding: 72px 0; }
+      .landing-semi-intensiva .lsi-btn-cta-grande   { font-size: 17px; padding: 18px 36px; min-width: unset; width: 100%; max-width: 360px; }
+    }
+    @media (max-width: 400px) {
+      .landing-semi-intensiva .lsi-hero-dato  { flex: 1 1 100%; }
+      .landing-semi-intensiva .lsi-docentes-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="landing-semi-intensiva">
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="lsi-hero">
+    <!-- PLACEHOLDER: en CSS (.lsi-hero) reemplazar la URL de background-image con la foto real -->
+    <div class="lsi-hero-overlay"></div>
+    <div class="lsi-hero-inner">
+
+      <!-- PLACEHOLDER: reemplazar con <img src="logo.png" alt="IMCA"> -->
+      <div class="lsi-logo-placeholder">
+        <span class="lsi-logo-text">IMCA</span>
+      </div>
+
+      <h1 class="lsi-hero-titulo">
+        <span class="lsi-hero-titulo-blanco">EDUCACIÓN</span>
+        <span class="lsi-hero-titulo-dorado">VINCULAR POSITIVA</span>
+      </h1>
+
+      <p class="lsi-hero-subtitulo">Formación en educación canina profesional con orientación antrozoológica</p>
+
+      <div class="lsi-hero-datos">
+        <div class="lsi-hero-dato">
+          <span class="lsi-hero-dato-icono"><i data-lucide="calendar"></i></span>
+          <div>
+            <span class="lsi-hero-dato-label">CURSADA</span>
+            <span class="lsi-hero-dato-valor">Semi-intensiva</span>
+          </div>
+        </div>
+        <div class="lsi-hero-dato">
+          <span class="lsi-hero-dato-icono"><i data-lucide="monitor"></i></span>
+          <div>
+            <span class="lsi-hero-dato-label">MODALIDAD</span>
+            <span class="lsi-hero-dato-valor">Asincrónica &amp; Online</span>
+          </div>
+        </div>
+        <div class="lsi-hero-dato">
+          <span class="lsi-hero-dato-icono"><i data-lucide="heart"></i></span>
+          <div>
+            <span class="lsi-hero-dato-label">ENFOQUE</span>
+            <span class="lsi-hero-dato-valor">Antrozoológico</span>
+          </div>
+        </div>
+        <div class="lsi-hero-dato">
+          <span class="lsi-hero-dato-icono"><i data-lucide="clock"></i></span>
+          <div>
+            <span class="lsi-hero-dato-label">DURACIÓN</span>
+            <span class="lsi-hero-dato-valor">6 meses</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lsi-hero-fecha-badge">
+        <i data-lucide="calendar-check"></i>
+        FECHA DE INICIO: SÁBADO 1 DE AGOSTO
+      </div>
+
+      <!-- PLACEHOLDER: reemplazar NUMERO_WHATSAPP_ACA con el número real (ej: 5491112345678) -->
+      <a href="https://wa.me/NUMERO_WHATSAPP_ACA?text=Hola!%20Quiero%20m%C3%A1s%20info%20sobre%20la%20cursada%20de%20Educaci%C3%B3n%20Vincular%20Positiva%20%F0%9F%90%BE"
+         target="_blank" rel="noopener" class="lsi-btn-cta">
+        ¡QUIERO ANOTARME!
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DE QUÉ SE TRATA
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-clara">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">¿De qué se trata el programa?</h2>
+      <p class="lsi-texto-descripcion">
+        El programa <strong>"Educación Canina Profesional: Educación Vincular Positiva"</strong> profesionaliza a las
+        personas interesadas en dedicarse a la educación y modificación de conducta canina desde una perspectiva
+        vincular, con conocimientos actualizados, multidisciplinarios e integrales, y herramientas de administración
+        y gestión de emprendimientos del sector multiespecie.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       OBJETIVOS
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-oscura">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion lsi-titulo-claro">Objetivos del Programa</h2>
+      <ul class="lsi-objetivos-lista">
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Profesionalizar al sector multiespecie en educación, modificación de conducta y bienestar canino.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Formar profesionales con conocimientos avalados científicamente.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Brindar un conocimiento integral y multidisciplinario sobre el comportamiento canino.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Formar profesionales con un estilo de trabajo empático con la familia multiespecie.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Destacar la importancia del vínculo humano-perro.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Brindar herramientas para mejorar la convivencia humano-perro.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Fomentar el vínculo humano-perro desde una perspectiva antrozoológica.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Ayudar a identificar las dinámicas de la familia multiespecie.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Conocer, evaluar y entender los alcances de cada profesional desde su rol.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Diseñar planes de trabajo multidisciplinarios junto a otros profesionales del bienestar animal.</li>
+        <li class="lsi-objetivo-item"><span class="lsi-check-icono"><i data-lucide="check-circle"></i></span>Brindar herramientas de administración y gestión de emprendimientos del sector multiespecie.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       INFORMACIÓN DE CURSADA
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-clara">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">Información de Cursada</h2>
+      <div class="lsi-cards-grid">
+
+        <div class="lsi-card">
+          <div class="lsi-card-icono"><i data-lucide="book-open"></i></div>
+          <h3 class="lsi-card-titulo">Carga Académica</h3>
+          <p class="lsi-card-texto">Más de 200 horas de clases teóricas y prácticas obligatorias.</p>
+        </div>
+
+        <div class="lsi-card">
+          <div class="lsi-card-icono"><i data-lucide="laptop"></i></div>
+          <h3 class="lsi-card-titulo">Modalidad Semi-Intensiva</h3>
+          <p class="lsi-card-texto">100% a distancia. Clases teóricas asincrónicas (grabadas, disponibles full time) + clases de práctica en vivo. Material en Campus Virtual exclusivo, se desbloquea mes a mes.</p>
+        </div>
+
+        <div class="lsi-card">
+          <div class="lsi-card-icono"><i data-lucide="users"></i></div>
+          <h3 class="lsi-card-titulo">¿Quién puede tomar el curso?</h3>
+          <p class="lsi-card-texto">Cualquier persona mayor de 18 años con secundario completo. No necesitás experiencia previa. También ideal para veterinarios/as, etólogos/as, cuidadores/as, paseadores/as y educadores/as que quieren actualizarse.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       RECURSOS DE CURSADA
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-media">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">Recursos de Cursada</h2>
+      <div class="lsi-recursos-grid">
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="video"></i></span>
+          <span class="lsi-recurso-texto">Material audiovisual grabado en el Campus con acceso privado</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="briefcase"></i></span>
+          <span class="lsi-recurso-texto">Prácticas profesionales presenciales y/o a distancia</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="message-circle"></i></span>
+          <span class="lsi-recurso-texto">Grupo de WhatsApp de consulta y discusión</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="monitor"></i></span>
+          <span class="lsi-recurso-texto">Clases online sincrónicas y asincrónicas</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="star"></i></span>
+          <span class="lsi-recurso-texto">Master Classes extras de especialistas del sector</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="search"></i></span>
+          <span class="lsi-recurso-texto">Análisis y evaluación de casos reales: role playing en vivo</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="calendar"></i></span>
+          <span class="lsi-recurso-texto">Participación en eventos del Instituto y de los profesores</span>
+        </div>
+        <div class="lsi-recurso-item">
+          <span class="lsi-recurso-icono"><i data-lucide="users"></i></span>
+          <span class="lsi-recurso-texto">Comunidad privada en Discord con bolsa de trabajo incorporada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TEMARIO POR MÓDULOS — ACORDEÓN
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-clara">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">Temario por Módulos</h2>
+
+      <div class="lsi-acordeon" id="lsi-acordeon">
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">01</span>
+            <span class="lsi-modulo-nombre">Domesticación, evolución e historia del vínculo humano-perro</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Las diversas teorías sobre el proceso de domesticación.</li>
+              <li>El vínculo humano-animal y el origen del perro.</li>
+              <li>La evolución del vínculo humano-animal.</li>
+              <li>Selección artificial y selección natural.</li>
+              <li>Introducción a las razas y tipologías caninas.</li>
+              <li>Tendencias y motivaciones prevalentes según tipología.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">02</span>
+            <span class="lsi-modulo-nombre">Introducción a la anatomía, higiene y salud canina</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Introducción a la anatomía y taxonomía canina.</li>
+              <li>El cuerpo y las distintas morfologías de los perros.</li>
+              <li>Los sentidos caninos y su implicancia en la conducta.</li>
+              <li>Controles sanitarios: calendario de vacunas, zoonosis, higiene básica, enfermedades prevenidas con las vacunas.</li>
+              <li>Introducción a la alimentación y nutrición canina.</li>
+              <li>Trastornos alimenticios más habituales.</li>
+              <li>Controles preventivos veterinarios.</li>
+              <li>Limpieza e higiene básica. Cuidados higiénicos básicos del profesional.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">03</span>
+            <span class="lsi-modulo-nombre">Comportamiento, etapas del desarrollo y etología canina</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>La biología del comportamiento y la conducta canina.</li>
+              <li>Introducción a la etología. Los por qué de la etología.</li>
+              <li>El lobo, el perro y su estructura social.</li>
+              <li>Status y roles dentro de un grupo.</li>
+              <li>La importancia de los recursos primarios en la estabilidad emocional de un perro.</li>
+              <li>Impulsos, motivaciones e instintos.</li>
+              <li>Estrés, frustración y ansiedad.</li>
+              <li>La gestión ambiental como herramienta de cambio.</li>
+              <li>El perfil canino, de los tutores y de la relación.</li>
+              <li>Las etapas del desarrollo: cachorros, adolescencia, juventud, adultez y vejez.</li>
+              <li>Problemas de conducta según etapas del desarrollo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">04</span>
+            <span class="lsi-modulo-nombre">Comunicación y lenguaje canino</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Funciones de la comunicación canina.</li>
+              <li>Códigos y canales de la comunicación canina.</li>
+              <li>La percepción subjetiva del mundo según el perro.</li>
+              <li>La socialización y las habilidades sociales del perro.</li>
+              <li>Las señales de calma en perros.</li>
+              <li>Emoción y lenguaje.</li>
+              <li>La teoría del juego canino.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">05</span>
+            <span class="lsi-modulo-nombre">Introducción y generalidades del derecho animal</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Los conceptos de "persona no-humana" y "familia multiespecie" en el derecho animal.</li>
+              <li>Las principales leyes contra el maltrato y crueldad animal.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">06</span>
+            <span class="lsi-modulo-nombre">Modelos vigentes y actualizados de bienestar animal</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Qué es el bienestar animal. Modelos de bienestar.</li>
+              <li>Las 5 libertades de R. Brambell.</li>
+              <li>La jerarquía de necesidades caninas de L. Michaels.</li>
+              <li>Bienestar físico y emocional.</li>
+              <li>El enriquecimiento ambiental como herramienta en la educación canina.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">07</span>
+            <span class="lsi-modulo-nombre">Conductismo y teorías del aprendizaje animal</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>El conductismo: qué estudia y para qué sirve.</li>
+              <li>Introducción al aprendizaje animal.</li>
+              <li>Aprendizajes no-asociativos: habituación y sensibilización.</li>
+              <li>Aprendizajes asociativos: condicionamiento clásico y operante.</li>
+              <li>Las frecuencias de reforzamiento y el control de estímulos.</li>
+              <li>Fases del aprendizaje canino.</li>
+              <li>Historial de aprendizaje.</li>
+              <li>Técnicas de educación canina.</li>
+              <li>Técnicas de modificación conductual.</li>
+              <li>Método ABA: análisis de conducta aplicado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">08</span>
+            <span class="lsi-modulo-nombre">Seguridad, responsabilidad y cuidados profesionales</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Gestión segura y controlada del entorno para asesorías.</li>
+              <li>Materiales y herramientas de trabajo.</li>
+              <li>Correcto manejo, cuidado y manipulación.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">09</span>
+            <span class="lsi-modulo-nombre">Programas, asesorías y clases grupales de educación canina</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>De qué se tratan las asesorías a familias multiespecie.</li>
+              <li>Cómo ir preparado a una asesoría.</li>
+              <li>Armado, gestión y desarrollo de clases grupales caninas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">10</span>
+            <span class="lsi-modulo-nombre">La práctica profesional del educador/a canino/a</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Qué son los comandos básicos y para qué sirven.</li>
+              <li>El juego canino en la práctica.</li>
+              <li>La práctica cotidiana con la convivencia multiespecie.</li>
+              <li>Confección y desarrollo de informes de trabajo.</li>
+              <li>Estructuración de asesorías y manejo del cliente.</li>
+              <li>Herramientas de evaluación: CBARQ y formulario de entrevista.</li>
+              <li>Taller de habilidades blandas.</li>
+              <li>Introducción a la identidad de marca.</li>
+              <li>El trabajo interdisciplinario: qué, cómo y para qué.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">11</span>
+            <span class="lsi-modulo-nombre">Primeros auxilios para profesionales caninos</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Actuación básica de primeros auxilios en perros. Técnicas de R.C.P. o soporte vital básico. Golpes de calor y actuación.</li>
+              <li>Reacciones alérgicas. Mordeduras. Urgencias digestivas. Convulsiones y heridas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">12</span>
+            <span class="lsi-modulo-nombre">Bases y principios de la Educación Vincular Positiva®</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>La Educación Vincular Positiva® como metodología.</li>
+              <li>Políticas LIMA y su aplicación.</li>
+              <li>Grupos de Interacción Canina (GIC®): qué son y para qué sirven en la educación canina.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lsi-modulo">
+          <button class="lsi-modulo-titulo" aria-expanded="false">
+            <span class="lsi-modulo-num">13</span>
+            <span class="lsi-modulo-nombre">Introducción a la gestión y marketing de emprendimientos</span>
+            <span class="lsi-modulo-chevron"><i data-lucide="chevron-down"></i></span>
+          </button>
+          <div class="lsi-modulo-contenido">
+            <ul class="lsi-modulo-lista">
+              <li>Cómo calcular el valor de tus servicios y análisis de rentabilidad.</li>
+              <li>Cómo registrar ingresos y egresos.</li>
+              <li>Planificación básica para emprendedores multiespecie.</li>
+              <li>Misión y visión.</li>
+              <li>Cliente ideal y buyer persona.</li>
+              <li>Estrategia de venta digital en redes sociales.</li>
+              <li>Cómo crear tu primer funnel de ventas.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /.lsi-acordeon -->
+
+      <div class="lsi-destaque-amarillo">
+        <strong>Actividades de Role Playing</strong> — Los alumnos trabajan, en vivo, sobre situaciones y casos
+        reales utilizando herramientas profesionales de análisis, intervención y evaluación conductual.
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MASTER CLASSES
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-oscura">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion lsi-titulo-claro">Master Classes Extras</h2>
+      <p class="lsi-subtitulo-seccion lsi-texto-claro">
+        Además del temario, el programa cuenta con un plus formativo: una serie de Master Classes donde
+        diferentes profesionales del sector ofrecen sus conocimientos.
+      </p>
+      <div class="lsi-masterclass-grid">
+
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">Las bases del vínculo humano-perro</h4>
+          <p class="lsi-masterclass-disertante">Dra. Paula Calvo — Antrozoóloga, Etóloga y Bioquímica</p>
+        </div>
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">El perro como miembro de la familia</h4>
+          <p class="lsi-masterclass-disertante">Dr. Marcos Díaz Videla — Doctor en Psicología y Antrozoólogo</p>
+        </div>
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">El rol del paseador canino en el bienestar de los perros</h4>
+          <p class="lsi-masterclass-disertante">Mariano García — ECA-IAABC</p>
+        </div>
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">Herramientas de marketing digital para creación de contenido en redes</h4>
+          <p class="lsi-masterclass-disertante">Keyla Bernal — ECA-IAABC, Lic. en Comunicación Social</p>
+        </div>
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">Guarderías responsables</h4>
+          <p class="lsi-masterclass-disertante">Belén Luque — Lic. en Dirección de Negocios, Educadora Canina Profesional</p>
+        </div>
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">Convivencia entre perros y gatos: qué sí y qué no</h4>
+          <p class="lsi-masterclass-disertante">Patricia Rech — Educadora canina y felina</p>
+        </div>
+        <div class="lsi-masterclass-card">
+          <span class="lsi-masterclass-icono"><i data-lucide="graduation-cap"></i></span>
+          <h4 class="lsi-masterclass-titulo">La revisión sistemática de literatura científica</h4>
+          <p class="lsi-masterclass-disertante">Carmen Sofía Brenes — Dra. en Comunicación Social &amp; Educadora Canina</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PRÁCTICAS PROFESIONALES
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-clara">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">Prácticas Profesionales</h2>
+
+      <div class="lsi-practicas-bloque lsi-practicas-obligatorias">
+        <h3 class="lsi-practicas-subtitulo">Prácticas Obligatorias</h3>
+        <div class="lsi-practica-item">
+          <div class="lsi-practica-num">1</div>
+          <div class="lsi-practica-contenido">
+            <strong class="lsi-practica-nombre">Presentación de caso real (ateneo)</strong>
+            <p class="lsi-practica-desc">Cada alumno presenta un caso real mediante un informe, en vivo. Se habilita a partir de la segunda parte del curso, cuando ya se cuenta con las herramientas técnicas. Hay clases de consulta con el profesor de prácticas.</p>
+          </div>
+        </div>
+        <div class="lsi-practica-item">
+          <div class="lsi-practica-num">2</div>
+          <div class="lsi-practica-contenido">
+            <strong class="lsi-practica-nombre">Hoja de Ruta de Práctica Profesional</strong>
+            <p class="lsi-practica-desc">Una vez habilitado el módulo de teorías del aprendizaje, se envía por correo una hoja de ruta de desafíos para futuros profesionales caninos, que el alumno realiza y graba para ser evaluado.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lsi-practicas-bloque lsi-practicas-optativas">
+        <h3 class="lsi-practicas-subtitulo">Prácticas Optativas</h3>
+        <div class="lsi-practica-item">
+          <div class="lsi-practica-num">1</div>
+          <div class="lsi-practica-contenido">
+            <strong class="lsi-practica-nombre">Práctica Profesional en actividades IMCA</strong>
+            <p class="lsi-practica-desc">El Instituto colabora con un refugio en Pilar, donde podés asistir para realizar prácticas reales con perros de refugio.</p>
+          </div>
+        </div>
+        <div class="lsi-practica-item">
+          <div class="lsi-practica-num">2</div>
+          <div class="lsi-practica-contenido">
+            <strong class="lsi-practica-nombre">Presentación del "CGC"</strong>
+            <p class="lsi-practica-desc">Los alumnos presentan un examen CGC (Canine Good Citizen) y rinden a distancia o presencial frente al docente de prácticas. Eligiendo esta opción, no tienen obligación de realizar la hoja de ruta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lsi-practicas-destaques">
+        <div class="lsi-destaque-mini">
+          <span class="lsi-destaque-mini-icono"><i data-lucide="zap"></i></span>
+          <span>Aprendé haciendo</span>
+        </div>
+        <div class="lsi-destaque-mini">
+          <span class="lsi-destaque-mini-icono"><i data-lucide="user-check"></i></span>
+          <span>Acompañamiento docente</span>
+        </div>
+        <div class="lsi-destaque-mini">
+          <span class="lsi-destaque-mini-icono"><i data-lucide="briefcase"></i></span>
+          <span>Experiencia real</span>
+        </div>
+        <div class="lsi-destaque-mini">
+          <span class="lsi-destaque-mini-icono"><i data-lucide="heart"></i></span>
+          <span>Formación ética, responsable y vincular</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PREPARACIÓN PROFESIONAL / SALIDAS
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-media">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">Preparación Profesional</h2>
+      <p class="lsi-texto-descripcion">
+        En IMCA formamos profesionales preparados para el mundo real, con acompañamiento constante y trabajo
+        sobre casos reales durante toda la cursada. El programa capacita para realizar:
+      </p>
+      <ul class="lsi-salidas-lista">
+        <li class="lsi-salida-item"><span class="lsi-salida-icono"><i data-lucide="arrow-right"></i></span>Asesorías presenciales o a distancia (individuales y grupales) de educación canina y modificación de conducta.</li>
+        <li class="lsi-salida-item"><span class="lsi-salida-icono"><i data-lucide="arrow-right"></i></span>Asistentes de especialistas en modificación de problemas de conducta medias y severas.</li>
+        <li class="lsi-salida-item"><span class="lsi-salida-icono"><i data-lucide="arrow-right"></i></span>Asesoramiento para refugios y guarderías caninas.</li>
+        <li class="lsi-salida-item"><span class="lsi-salida-icono"><i data-lucide="arrow-right"></i></span>Cursos y talleres de formación para tutores/as responsables.</li>
+      </ul>
+      <div class="lsi-certificado-destaque">
+        <span class="lsi-certificado-icono"><i data-lucide="award"></i></span>
+        <span><strong>Certificado de Asistencia y Práctica</strong> emitido por el Instituto Multidisciplinario de Comportamiento Animal.</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EQUIPO DOCENTE
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-oscura">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion lsi-titulo-claro">Equipo Docente IMCA</h2>
+      <p class="lsi-subtitulo-seccion lsi-texto-claro">Profesionales de excelencia e hispanohablantes.</p>
+      <div class="lsi-docentes-grid">
+
+        <!-- PLACEHOLDER: reemplazar cada lsi-docente-foto-placeholder con <img src="URL" alt="Nombre"> -->
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Ignacio A. Maciel</h4>
+          <p class="lsi-docente-rol">Director General · Educación Vincular Positiva</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Nicolás Destéfano</h4>
+          <p class="lsi-docente-rol">Coordinador Área Etología · MV. Etólogo Clínico (Tricoma Vet)</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Belén P. Luque</h4>
+          <p class="lsi-docente-rol">Coordinadora de área negocios · Educadora Canina (MascoClub)</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Carmen Sofía Brenes</h4>
+          <p class="lsi-docente-rol">Dra. en Comunicación Social · Educadora Canina Profesional</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">María José Domínguez Edreira</h4>
+          <p class="lsi-docente-rol">Abogada &amp; Docente FD-UBA</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Marcos Díaz Videla</h4>
+          <p class="lsi-docente-rol">Dr. en Psicología · Antrozoólogo</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Mariano García</h4>
+          <p class="lsi-docente-rol">Educador Canino Profesional</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Noelia Soledad Toto</h4>
+          <p class="lsi-docente-rol">Docente de Prácticas · Educadora Canina Profesional</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Facundo Naredo</h4>
+          <p class="lsi-docente-rol">Docente de Prácticas · Educador Canino Profesional</p>
+        </div>
+        <div class="lsi-docente-card">
+          <div class="lsi-docente-foto-wrapper"><div class="lsi-docente-foto-placeholder"><i data-lucide="user"></i></div></div>
+          <h4 class="lsi-docente-nombre">Patricia Cabrera</h4>
+          <p class="lsi-docente-rol">Educadora Canina Profesional</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ARANCELES 2026
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-clara" id="lsi-aranceles">
+    <div class="lsi-container">
+      <h2 class="lsi-titulo-seccion">Aranceles 2026</h2>
+      <p class="lsi-subtitulo-seccion">Programa que inicia en Agosto 2026</p>
+
+      <h3 class="lsi-aranceles-region-titulo">Para residentes en Argentina</h3>
+      <div class="lsi-precios-grid">
+        <div class="lsi-precio-card">
+          <div class="lsi-precio-plan">Plan en cuotas</div>
+          <div class="lsi-precio-valor">6 cuotas de<br><strong>$260.000</strong></div>
+        </div>
+        <div class="lsi-precio-card lsi-precio-card-destacado">
+          <div class="lsi-badge-descuento">10% OFF</div>
+          <div class="lsi-precio-plan">3 pagos</div>
+          <div class="lsi-precio-valor"><strong>$470.000</strong><br><small>por pago</small></div>
+        </div>
+        <div class="lsi-precio-card lsi-precio-card-destacado">
+          <div class="lsi-badge-descuento">25% OFF</div>
+          <div class="lsi-precio-plan">Pago único</div>
+          <div class="lsi-precio-valor"><strong>$1.170.000</strong></div>
+        </div>
+      </div>
+      <div class="lsi-inscripcion-anticipada">
+        <span class="lsi-ia-icono"><i data-lucide="zap"></i></span>
+        <strong>INSCRIPCIÓN ANTICIPADA</strong> — 10% EXTRA para inscripciones antes del 30 de junio.
+      </div>
+
+      <h3 class="lsi-aranceles-region-titulo lsi-mt-seccion">Para residentes fuera de Argentina</h3>
+      <div class="lsi-precios-grid">
+        <div class="lsi-precio-card">
+          <div class="lsi-precio-plan">Plan en cuotas</div>
+          <div class="lsi-precio-valor">6 cuotas de<br><strong>USD 300</strong></div>
+        </div>
+        <div class="lsi-precio-card lsi-precio-card-destacado">
+          <div class="lsi-badge-descuento">10% OFF</div>
+          <div class="lsi-precio-plan">3 pagos</div>
+          <div class="lsi-precio-valor"><strong>USD 540</strong><br><small>por pago</small></div>
+        </div>
+        <div class="lsi-precio-card lsi-precio-card-destacado">
+          <div class="lsi-badge-descuento">25% OFF</div>
+          <div class="lsi-precio-plan">Pago único</div>
+          <div class="lsi-precio-valor"><strong>USD 1350</strong></div>
+        </div>
+      </div>
+      <div class="lsi-inscripcion-anticipada">
+        <span class="lsi-ia-icono"><i data-lucide="zap"></i></span>
+        <strong>INSCRIPCIÓN ANTICIPADA</strong> — 10% EXTRA para inscripciones antes del 30 de junio.
+      </div>
+
+      <div class="lsi-banner-cta-aranceles">
+        <span class="lsi-banner-icono"><i data-lucide="gift"></i></span>
+        <span>¡INSCRIBITE HOY Y ACCEDÉ A UN <strong>10% EXTRA!</strong></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section class="lsi-seccion lsi-seccion-oscura lsi-cta-final">
+    <div class="lsi-container lsi-cta-contenido">
+      <h2 class="lsi-titulo-seccion lsi-titulo-claro">¿Lista/o para dar el primer paso?</h2>
+      <p class="lsi-cta-desc lsi-texto-claro">
+        Anotate a la cursada semi-intensiva de Educación Vincular Positiva y transformá tu pasión en una profesión.
+      </p>
+      <!-- PLACEHOLDER: reemplazar NUMERO_WHATSAPP_ACA con el número real -->
+      <a href="https://wa.me/NUMERO_WHATSAPP_ACA?text=Hola!%20Quiero%20m%C3%A1s%20info%20sobre%20la%20cursada%20de%20Educaci%C3%B3n%20Vincular%20Positiva%20%F0%9F%90%BE"
+         target="_blank" rel="noopener" class="lsi-btn-cta lsi-btn-cta-grande">
+        ¡QUIERO ANOTARME!
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="lsi-footer">
+    <div class="lsi-container lsi-footer-inner">
+      <!-- PLACEHOLDER: reemplazar con <img src="logo.png" alt="IMCA"> -->
+      <div class="lsi-footer-logo">
+        <span class="lsi-logo-text lsi-logo-footer">IMCA</span>
+      </div>
+      <div class="lsi-footer-info">
+        <p class="lsi-footer-inst">Instituto Multidisciplinario de Comportamiento Animal</p>
+        <p class="lsi-footer-tagline">Formación y bienestar animal</p>
+        <div class="lsi-footer-contacto">
+          <a href="mailto:consultasimca@gmail.com" class="lsi-footer-link">
+            <span class="lsi-footer-icono"><i data-lucide="mail"></i></span>
+            consultasimca@gmail.com
+          </a>
+          <a href="https://instagram.com/institutoimca" target="_blank" rel="noopener" class="lsi-footer-link">
+            <span class="lsi-footer-icono"><i data-lucide="instagram"></i></span>
+            @institutoimca
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /.landing-semi-intensiva -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Inicializar íconos Lucide (la librería ya está cargada en el <head>)
+    if (window.lucide) lucide.createIcons();
+
+    // Acordeón de módulos
+    var root    = document.querySelector('.landing-semi-intensiva');
+    var modulos = root.querySelectorAll('.lsi-modulo');
+
+    modulos.forEach(function (modulo) {
+      var btn = modulo.querySelector('.lsi-modulo-titulo');
+      if (!btn) return;
+
+      btn.addEventListener('click', function () {
+        var yaAbierto = modulo.classList.contains('lsi-abierto');
+
+        // Cerrar todos
+        modulos.forEach(function (m) {
+          m.classList.remove('lsi-abierto');
+          var b = m.querySelector('.lsi-modulo-titulo');
+          if (b) b.setAttribute('aria-expanded', 'false');
+        });
+
+        // Abrir el clickeado si estaba cerrado
+        if (!yaAbierto) {
+          modulo.classList.add('lsi-abierto');
+          btn.setAttribute('aria-expanded', 'true');
+          // Scroll suave para que el título quede visible en mobile
+          setTimeout(function () {
+            var top = btn.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }, 50);
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
