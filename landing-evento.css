@@ -168,10 +168,9 @@
   align-items:     center;
   justify-content: center;
   overflow:        hidden;
-  /* PLACEHOLDER: reemplazar esta URL con la foto real del instituto */
-  background-image:    url('https://placehold.co/1600x900/042C3C/467FF7?text=📸+FOTO+PORTADA+IMCA');
+  background-image:    url('http://institutomca.com/wp-content/uploads/2026/06/IMG_9256-scaled.jpg');
   background-size:     cover;
-  background-position: center top;
+  background-position: center center;
 }
 
 .landing-semi-intensiva .lsi-hero-overlay {
@@ -193,11 +192,6 @@
   flex-direction:  column;
   align-items:     center;
   gap:             24px;
-}
-
-/* Logo placeholder */
-.landing-semi-intensiva .lsi-logo-placeholder {
-  margin-bottom: 4px;
 }
 
 .landing-semi-intensiva .lsi-logo-text {
@@ -867,7 +861,6 @@
   color:  var(--lsi-dorado);
 }
 
-/* Cuando se reemplacen los placeholders por <img> */
 .landing-semi-intensiva .lsi-docente-foto-wrapper img {
   width:         90px;
   height:        90px;
