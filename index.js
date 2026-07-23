@@ -62,12 +62,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var inner    = overlay.querySelector('.lsi-lightbox-inner');
     var scale    = 1, MIN = 0.25, MAX = 4, STEP = 0.25;
 
+    // setProperty(..., 'important') asegura que ningún CSS global del
+    // tema/Elementor (ej. un "img { width:100% !important }") pise el
+    // tamaño calculado, ya que el lightbox vive fuera de .landing-semi-intensiva.
+    function setSize(w, h) {
+      img.style.setProperty('width',  w + 'px', 'important');
+      img.style.setProperty('height', h + 'px', 'important');
+    }
+
     function setScale(s, cx, cy) {
       var prev = scale;
       scale = Math.min(MAX, Math.max(MIN, s));
       var sl = stage.scrollLeft, st = stage.scrollTop;
-      img.style.width  = Math.round(img.naturalWidth  * scale) + 'px';
-      img.style.height = Math.round(img.naturalHeight * scale) + 'px';
+      setSize(Math.round(img.naturalWidth * scale), Math.round(img.naturalHeight * scale));
       label.textContent = Math.round(scale * 100) + '%';
       if (cx !== undefined) {
         var r = stage.getBoundingClientRect();
@@ -78,17 +85,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function open(src, alt) {
       img.src = src; img.alt = alt || '';
-      img.style.width = 'auto'; img.style.height = 'auto';
+      img.style.setProperty('width',      'auto',        'important');
+      img.style.setProperty('height',     'auto',        'important');
+      img.style.setProperty('max-width',  'fit-content', 'important');
       overlay.classList.add('lsi-lightbox-visible');
       document.body.style.overflow = 'hidden';
       function fit() {
-        var sw = stage.clientWidth - 48, sh = stage.clientHeight - 48;
-        scale = Math.min(sw / img.naturalWidth, sh / img.naturalHeight, 1);
-        img.style.width  = Math.round(img.naturalWidth  * scale) + 'px';
-        img.style.height = Math.round(img.naturalHeight * scale) + 'px';
+        // Escala solo por ancho: nunca deforma la imagen. Si el alto resultante
+        // no entra en pantalla, el stage scrollea verticalmente (overflow: auto).
+        var sw = stage.clientWidth - 48;
+        scale = Math.min(sw / img.naturalWidth, 1);
+        setSize(Math.round(img.naturalWidth * scale), Math.round(img.naturalHeight * scale));
         label.textContent = Math.round(scale * 100) + '%';
         stage.scrollLeft = (stage.scrollWidth  - stage.clientWidth)  / 2;
-        stage.scrollTop  = (stage.scrollHeight - stage.clientHeight) / 2;
+        stage.scrollTop  = 0;
       }
       if (img.complete && img.naturalWidth) { fit(); } else { img.onload = fit; }
     }

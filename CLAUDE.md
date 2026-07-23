@@ -10,7 +10,7 @@ Landing page para la cursada semi-intensiva "Educación Vincular Positiva" del I
 |---|---|
 | `index.html` | HTML completo de la landing. Se pega en un widget HTML de Elementor. |
 | `landing-evento.css` | Todos los estilos. Se pega en Simple Custom CSS and JS → campo CSS. |
-| `index.js` | JS del acordeón y carga de Lucide icons. Se pega en Simple Custom CSS and JS → campo JS. |
+| `index.js` | TODO el JS. Se pega en Simple Custom CSS and JS → campo JS. |
 
 ## Reglas de código
 

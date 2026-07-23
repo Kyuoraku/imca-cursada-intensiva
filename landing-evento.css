@@ -1317,6 +1317,7 @@
   box-shadow:    var(--lsi-sombra);
   flex:          1 1 0;
   min-width:     0;
+  max-width:     fit-content !important;
 }
 
 .landing-semi-intensiva .lsi-practicas-texto {
